@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./partials/head.ejs') %>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <title>Statistics</title>
+</head>
+<body>
+  <%- include('./partials/header.ejs') %>
+  <div class="display">
+    <h1 class="title">Statistics</h1>
+    <br><br><br>
+    <h2>Table</h2>
+    <table>
+      <tr>
+        <th>Category</th>
+        <th>Total Sales</th>
+      </tr>
+  <% 
+  statistics.forEach(element => { 
+    let category;
+    switch (element.CategoryId) {
+      case 1:
+        category = "Piano & Keyboard"
+        break;
+    
+      case 2:
+        category = "Guitar & bass"
+        break;
+    
+      case 3:
+        category = "Drum & Percussion"
+        break;
+    
+      default:
+        break;
+    }
+  %>
+    <tr>
+      <td><%= category %> </td>
+      <td><%= element.totalPenjualan %> </td>
+    </tr>
+  <%}); %> 
+
+    </table>
+    <br><br><br>
+    <h3>Chart</h3>
+
+    <div class="chartcontainer">
+      <canvas id="myChart"></canvas>
+    </div>
+  
+  </div>
+  <%- include('./partials/footer.ejs') %>
+  <script>
+      let myChart = document.getElementById('myChart').getContext('2d')
+
+      let barChart = new Chart(myChart, {
+        type:'bar',
+        options:{
+          scales:{
+            y:{
+              min:0,
+              max:100
+            }
+          }
+        },
+        data:{
+          labels:['Piano & Keyboard', "Guitar & Bass", "Drum & Percussion"],
+          datasets:[{
+            label:'Total Sales',
+            data:[
+              <% statistics.forEach(el =>{ %>
+                <%= el.totalPenjualan %>, 
+              <% }) %>
+            ]
+          }],
+        },
+      });
+    </script>
+</body>
+</html>

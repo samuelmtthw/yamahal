@@ -1,4 +1,4 @@
-const { Product, Category } = require('../models');
+const { Product, Category, sequelize } = require('../models');
 const { Op } = require('sequelize');
 const formatPrice = require('../helpers/formatPrice');
 
@@ -115,6 +115,22 @@ class ProductController {
 		Product.destroy({ where: { id: productId } })
 			.then(() => {
 				res.redirect('/sales');
+			})
+			.catch((err) => {
+				console.log(err);
+				res.send(err);
+			});
+	}
+
+	static showStatistics(req, res) {
+		let session = req.session;
+		sequelize
+			.query(
+				'SELECT COUNT("id") AS "totalPenjualan", "CategoryId" FROM "Products" GROUP BY "CategoryId";'
+			)
+			.then((statistic) => {
+				let statistics = statistic[0];
+				res.render('statistics', { statistics, session });
 			})
 			.catch((err) => {
 				console.log(err);

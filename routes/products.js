@@ -9,6 +9,8 @@ router.get('/add', ProductController.showAddProduct);
 
 router.post('/add', ProductController.addProduct);
 
+router.get('/statistics', ProductController.showStatistics);
+
 router.get('/:productId', ProductController.showProductDetails);
 
 router.get('/:productId/buy', ProductController.buyProduct);
