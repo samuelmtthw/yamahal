@@ -11,33 +11,39 @@
     .row {
       margin-top: 50px;
       border-radius: 30px;
-      background-color: #48217a;
-      box-shadow: 8px 15px 20px -5px rgba(143, 139, 139, 0.75);
-      -webkit-box-shadow: 8px 15px 20px -5px rgba(143, 139, 139, 0.75);
-      -moz-box-shadow: 8px 15px 20px -5px rgba(143, 139, 139, 0.75);
+      background-color: white;
+      box-shadow: 0 5px 35px rgba(0, 0, 0, 0.18);
     }
     * {
       color: white;
     }
+
+    section {
+      height: 75vh;
+    }
+
+    .btn {
+      background-color: #48217a;
+    }
   </style>
   <body>
     <%- include('./partials/header.ejs') %>
-    <section style="margin-bottom:50px ;">
+    <section style="margin-bottom: 50px">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-6">
             <form action="/login" method="post" class="mt-5 pb-3">
-              <h1 class="text-center">Login</h1>
+              <h1 class="text-center text-dark">Login</h1>
               <div class="mb-3">
-                <label for="username">Username</label>
+                <label for="username" class="text-dark">Username</label>
                 <input class="form-control" type="text" name="username" id="username" placeholder="Username" />
               </div>
               <div class="mb-3">
-                <label for="password">Password</label>
+                <label for="password" class="text-dark">Password</label>
                 <input class="form-control" type="password" name="password" id="password" placeholder="*********" />
               </div>
-              <input class="btn btn-dark" type="submit" value="Log in" />
-              <p class="mt-3">Don't have an account? <a href="/register">Register Here</a></p>
+              <input class="btn text-light" type="submit" value="Log in" />
+              <p class="mt-3 text-dark">Don't have an account? <a href="/register">Register Here</a></p>
             </form>
           </div>
         </div>

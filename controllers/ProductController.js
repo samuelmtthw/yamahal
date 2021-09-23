@@ -32,7 +32,7 @@ class ProductController {
 		Product.findByPk(productId)
 			.then((product) => {
 				let session = req.session;
-				res.render('product-details', { product });
+				res.render('product-details', { product, session });
 			})
 			.catch((err) => {
 				res.send(err);

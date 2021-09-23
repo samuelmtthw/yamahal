@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <%- include('./partials/head.ejs') %>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Purchases</title>
-</head>
-<body>
-  <%- include('./partials/header.ejs') %>
-  <div class="display">
-    <h1 class="title">Purchases</h1>
-    You have <%= purchases.length %> purchases
-    <div class="items">
-      <% purchases.forEach(el=>{ %> 
+  <head>
+    <%- include('./partials/head.ejs') %>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purchases</title>
+  </head>
+  <style>
+    .display {
+      height: 75vh;
+    }
+  </style>
+  <body>
+    <%- include('./partials/header.ejs') %>
+    <div class="display">
+      <h1 class="title">Purchases</h1>
+      You have <%= purchases.length %> purchases
+      <div class="items">
+        <% purchases.forEach(el=>{ %>
         <div class="card">
           <span class="name"><%= el.name %></span>
-          <span class="price">
-            € <%= el.price %> 
-          </span>
-          <img src="<%= el.imageUrl %> " alt="<%= el.name %>">
-          <strong>Purchased on: </strong> <%= el.updatedAtFormatted %> 
+          <span class="price"> € <%= el.price %> </span>
+          <img src="<%= el.imageUrl %> " alt="<%= el.name %>" />
+          <strong>Purchased on: </strong> <%= el.updatedAtFormatted %>
         </div>
-      <% })%> 
+        <% })%>
+      </div>
     </div>
-  </div>
     <%- include('./partials/footer.ejs') %>
-</body>
+  </body>
 </html>
