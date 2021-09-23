@@ -91,7 +91,29 @@ class ProductController {
 			});
 	}
 
-	static showAdminProducts(req, res) {}
+	static showAdminProducts(req, res) {
+		let session = req.session;
+		Product.findAll()
+			.then((products) => {
+				res.render('sales', { products, session });
+			})
+			.catch((err) => {
+				res.send(err);
+			});
+	}
+
+	static deleteProduct(req, res) {
+		let productId = Number(req.params.productId);
+
+		Product.destroy({ where: { id: productId } })
+			.then(() => {
+				res.redirect('/sales');
+			})
+			.catch((err) => {
+				console.log(err);
+				res.send(err);
+			});
+	}
 }
 
 module.exports = ProductController;

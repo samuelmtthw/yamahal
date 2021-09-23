@@ -7,6 +7,7 @@ const router = express.Router();
 
 const products = require('./products');
 const user = require('./user');
+const ProductController = require('../controllers/ProductController');
 
 /**
  * Authentication
@@ -27,5 +28,6 @@ router.get('/', Controller.showHomepage);
 
 router.use('/products', products);
 router.use('/user', user);
+router.get('/sales', ProductController.showAdminProducts);
 
 module.exports = router;

@@ -13,4 +13,6 @@ router.get('/:productId', ProductController.showProductDetails);
 
 router.get('/:productId/buy', ProductController.buyProduct);
 
+router.get('/:productId/delete', ProductController.deleteProduct);
+
 module.exports = router;
