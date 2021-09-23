@@ -22,6 +22,26 @@ class ProductController {
 				res.send(err);
 			});
 	}
+
+	static buyProduct(req, res) {
+		let productId = Number(req.params.productId);
+		let userId = Number(req.session.UserId);
+
+		Product.update(
+			{
+				UserId: userId,
+			},
+			{
+				where: { id: productId },
+			}
+		)
+			.then(() => {
+				res.redirect('/user/purchases');
+			})
+			.catch((err) => {
+				res.send(err);
+			});
+	}
 }
 
 module.exports = ProductController;

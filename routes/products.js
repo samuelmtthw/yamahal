@@ -7,4 +7,6 @@ router.get('/', ProductController.showAllProducts);
 
 router.get('/:productId', ProductController.showProductDetails);
 
+router.get('/:productId/buy', ProductController.buyProduct);
+
 module.exports = router;
