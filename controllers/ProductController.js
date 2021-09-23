@@ -83,6 +83,8 @@ class ProductController {
 	static addProduct(req, res) {
 		let { name, price, imageUrl, CategoryId, description } = req.body;
 
+		name = Product.formatName(name);
+
 		console.log(req.body);
 		Product.create({ name, price, imageUrl, CategoryId, description })
 			.then(() => {

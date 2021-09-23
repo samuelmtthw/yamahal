@@ -20,6 +20,14 @@ module.exports = (sequelize, DataTypes) => {
 		get createdAtFormatted() {
 			return new Date(this.createdAt).toISOString().split('T')[0];
 		}
+
+		static formatName(str) {
+			str = str.toLowerCase().split(' ');
+			for (var i = 0; i < str.length; i++) {
+				str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+			}
+			return str.join(' ');
+		}
 	}
 	Product.init(
 		{

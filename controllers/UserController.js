@@ -23,8 +23,7 @@ class UserController {
 					.then(() => {
 						req.session.isLogin = true;
 						req.session.UserId = result.id;
-						console.log(result.role);
-						// req.session.role = result.role;
+						req.session.role = result.role;
 						req.session.name = name;
 						res.redirect('/');
 					})
