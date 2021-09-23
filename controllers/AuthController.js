@@ -1,4 +1,5 @@
 const { User } = require('../models');
+const bcrypt = require('bcryptjs');
 
 class AuthController {
 	static formLogin(req, res) {
@@ -17,11 +18,13 @@ class AuthController {
 					res.send(`Username / Password is incorrect`);
 				} else {
 					// TODO compare password pake bcrypt
-					if (password === user.password) {
+					let hash = user.password;
+
+					if (bcrypt.compareSync(password, hash)) {
 						req.session.role = user.role;
 						req.session.isLogin = true;
 						req.session.name = user.username;
-						res.redirect('/products');
+						res.redirect('/');
 					} else {
 						res.send('Username / Password is incorrect');
 					}
