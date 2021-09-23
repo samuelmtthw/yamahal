@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <%- include('./partials/head.ejs') %>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products</title>
 </head>
 <body>
-  <h1>Products</h1>
-  <% products.forEach(el=>{ %> 
-  <div class="card">
-    <%= el.name %>
-    Rp. <%= el.price %> 
-    <img src="<%= el.imageUrl %> " alt="<%= el.name %>">
-    <a href="/products/<%= el.id %>">Details</a>
+  <%- include('./partials/header.ejs') %>
+  <div class="display">
+    <h1 class="title">Products</h1>
+    <form>
+      <input type="search" name="name" placeholder="Item Name">
+      <input type="submit" value="Search">
+    </form>
+    <div class="items">
+      <% products.forEach(el=>{ %> 
+      <div class="card" data-aos="fade-up">
+        <span class="name"><%= el.name %></span>
+        <span class="price">€ <%= el.price %></span> 
+        <img src="<%= el.imageUrl %> " alt="<%= el.name %>">
+        <a href="/products/<%= el.id %>" class="details">Details</a>
+      </div>
+      <% })%> 
+    </div>
   </div>
-  <% })%> 
-  <a href="/">Back</a>
+  <%- include('./partials/footer.ejs') %>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init()</script>
 </body>
 </html>

@@ -1,8 +1,22 @@
 const { Product } = require('../models');
+const { Op } = require('sequelize');
 
 class ProductController {
 	static showAllProducts(req, res) {
-		Product.findAll({ where: { UserId: null } })
+		let name = req.query.name;
+
+		let condition;
+
+		if (!name) {
+			condition = { UserId: null };
+		} else {
+			condition = {
+				UserId: null,
+				name: { [Op.iLike]: `%${name}%` },
+			};
+		}
+
+		Product.findAll({ where: condition })
 			.then((products) => {
 				res.render('products-available', { products });
 			})
