@@ -2,91 +2,91 @@
 	{
 		"name": "Yamahal CF Series",
 		"description": "Bagus.",
-		"price": 5,
+		"price": 5000,
 		"CategoryId": 1
 	},
 	{
 		"name": "Yamahal CF Series",
 		"description": "Barang B-Stock.",
-		"price": 2,
+		"price": 2000,
 		"CategoryId": 1
 	},
 	{
 		"name": "Yamahal SX Series",
 		"description": "Bagus.",
-		"price": 10,
+		"price": 10000,
 		"CategoryId": 1
 	},
 	{
 		"name": "Yamahal SX Series",
 		"description": "Barang B-Stock.",
-		"price": 4,
+		"price": 4000,
 		"CategoryId": 1
 	},
 	{
 		"name": "Yamahal GB Series",
 		"description": "Bagus.",
-		"price": 15,
+		"price": 15000,
 		"CategoryId": 1
 	},
 	{
 		"name": "Yamahal GB Series",
 		"description": "Barang B-Stock.",
-		"price": 6,
+		"price": 6000,
 		"CategoryId": 1
 	},
 	{
 		"name": "Fandar Stratocaster",
 		"description": "Bagus.",
-		"price": 3,
+		"price": 3000,
 		"CategoryId": 2
 	},
 	{
 		"name": "Fandar Stratocaster",
 		"description": "Barang B-Stock.",
-		"price": 2,
+		"price": 2000,
 		"CategoryId": 2
 	},
 	{
 		"name": "Fandar Telecaster",
 		"description": "Bagus.",
-		"price": 5,
+		"price": 5000,
 		"CategoryId": 2
 	},
 	{
 		"name": "Fandar Telecaster",
 		"description": "Barang B-Stock.",
-		"price": 3,
+		"price": 3000,
 		"CategoryId": 2
 	},
 	{
 		"name": "Fandar Jazz Bass",
 		"description": "Bagus.",
-		"price": 8,
+		"price": 8000,
 		"CategoryId": 2
 	},
 	{
 		"name": "Fandar Jazz Bass",
 		"description": "Barang B-Stock.",
-		"price": 5,
+		"price": 5000,
 		"CategoryId": 2
 	},
 	{
 		"name": "Fandar Jazz Bass",
 		"description": "Barang B-Stock.",
-		"price": 5,
+		"price": 5000,
 		"CategoryId": 2
 	},
 	{
 		"name": "Yamahal Drum",
 		"description": "Bagus",
-		"price": 15,
+		"price": 15000,
 		"CategoryId": 3
 	},
 	{
 		"name": "Yamahal Drum",
 		"description": "Barang B-Stock.",
-		"price": 15,
+		"price": 15000,
 		"CategoryId": 3
 	}
 ]
