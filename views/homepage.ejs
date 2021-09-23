@@ -7,9 +7,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
   </head>
+  <style>
+    .carousel-inner {
+      height: 500px;
+    }
+  </style>
   <body>
     <%- include('./partials/header.ejs') %>
+    <section class="main">
+      <div class="container py-3">
+        <div id="carousel-banner" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" class="d-block w-100 h-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="https://images.unsplash.com/photo-1571327073757-71d13c24de30?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" class="d-block w-100 h-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="https://images.unsplash.com/photo-1578735547202-892b1f03a587?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" class="d-block w-100 h-100" alt="..." />
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousel-banner" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carousel-banner" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
 
+    <section class="content">
+      <div class="container">
+        <div class="row py-5">
+          <div class="col-4">
+            <div class="card w-100" style="width: 20rem">
+              <img src="https://images.unsplash.com/photo-1522249210728-7cd95094022a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Yuk Belanja Sekarang Juga!</h5>
+                <p class="card-text">Dapatkan Barang Unlimited Dengan Harga Termahal Hanya Di Yamahal</p>
+                <a href="/products" class="btn text-light" style="background-color: #48217a">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card w-100" style="width: 20rem">
+              <img src="https://images.unsplash.com/photo-1565876651345-6a24080c1c77?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1167&q=80" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Cek Profile-mu Yuk!</h5>
+                <p class="card-text" style="text-align: justify">Pastikan Data Diri-mu Sudah Benar Ya.</p>
+                <a href="/user/info" class="btn text-light" style="background-color: #48217a">Profile</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card w-100" style="width: 20rem">
+              <img src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Sudah Beli Apa Aja?</h5>
+                <p class="card-text">Lihat History Pembelian.</p>
+                <a href="/user/purchases" class="btn text-light" style="background-color: #48217a">History</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <%- include('./partials/footer.ejs') %>
   </body>
 </html>
