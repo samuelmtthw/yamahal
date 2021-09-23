@@ -3,90 +3,105 @@
 		"name": "Yamahal CF Series",
 		"description": "Bagus.",
 		"price": 5000,
+		"imageUrl": "https://yt3.ggpht.com/1DD9uGmDxYreoJ5mVJWueEojmKw9C3XaPtDmfdTSGxXvfh9UPOLJUVqlfEk3H2-enqNQ7v3azw=s900-c-k-c0x00ffffff-no-rj",
 		"CategoryId": 1
 	},
 	{
 		"name": "Yamahal CF Series",
 		"description": "Barang B-Stock.",
 		"price": 2000,
+		"imageUrl": "https://yt3.ggpht.com/1DD9uGmDxYreoJ5mVJWueEojmKw9C3XaPtDmfdTSGxXvfh9UPOLJUVqlfEk3H2-enqNQ7v3azw=s900-c-k-c0x00ffffff-no-rj",
 		"CategoryId": 1
 	},
 	{
 		"name": "Yamahal SX Series",
 		"description": "Bagus.",
 		"price": 10000,
+		"imageUrl": "https://yt3.ggpht.com/1DD9uGmDxYreoJ5mVJWueEojmKw9C3XaPtDmfdTSGxXvfh9UPOLJUVqlfEk3H2-enqNQ7v3azw=s900-c-k-c0x00ffffff-no-rj",
 		"CategoryId": 1
 	},
 	{
 		"name": "Yamahal SX Series",
 		"description": "Barang B-Stock.",
 		"price": 4000,
+		"imageUrl": "https://yt3.ggpht.com/1DD9uGmDxYreoJ5mVJWueEojmKw9C3XaPtDmfdTSGxXvfh9UPOLJUVqlfEk3H2-enqNQ7v3azw=s900-c-k-c0x00ffffff-no-rj",
 		"CategoryId": 1
 	},
 	{
 		"name": "Yamahal GB Series",
 		"description": "Bagus.",
 		"price": 15000,
+		"imageUrl": "https://yt3.ggpht.com/1DD9uGmDxYreoJ5mVJWueEojmKw9C3XaPtDmfdTSGxXvfh9UPOLJUVqlfEk3H2-enqNQ7v3azw=s900-c-k-c0x00ffffff-no-rj",
 		"CategoryId": 1
 	},
 	{
 		"name": "Yamahal GB Series",
 		"description": "Barang B-Stock.",
 		"price": 6000,
+		"imageUrl": "https://yt3.ggpht.com/1DD9uGmDxYreoJ5mVJWueEojmKw9C3XaPtDmfdTSGxXvfh9UPOLJUVqlfEk3H2-enqNQ7v3azw=s900-c-k-c0x00ffffff-no-rj",
 		"CategoryId": 1
 	},
 	{
 		"name": "Fandar Stratocaster",
 		"description": "Bagus.",
 		"price": 3000,
+		"imageUrl": "https://yt3.ggpht.com/1DD9uGmDxYreoJ5mVJWueEojmKw9C3XaPtDmfdTSGxXvfh9UPOLJUVqlfEk3H2-enqNQ7v3azw=s900-c-k-c0x00ffffff-no-rj",
 		"CategoryId": 2
 	},
 	{
 		"name": "Fandar Stratocaster",
 		"description": "Barang B-Stock.",
 		"price": 2000,
+		"imageUrl": "https://yt3.ggpht.com/1DD9uGmDxYreoJ5mVJWueEojmKw9C3XaPtDmfdTSGxXvfh9UPOLJUVqlfEk3H2-enqNQ7v3azw=s900-c-k-c0x00ffffff-no-rj",
 		"CategoryId": 2
 	},
 	{
 		"name": "Fandar Telecaster",
 		"description": "Bagus.",
 		"price": 5000,
+		"imageUrl": "https://yt3.ggpht.com/1DD9uGmDxYreoJ5mVJWueEojmKw9C3XaPtDmfdTSGxXvfh9UPOLJUVqlfEk3H2-enqNQ7v3azw=s900-c-k-c0x00ffffff-no-rj",
 		"CategoryId": 2
 	},
 	{
 		"name": "Fandar Telecaster",
 		"description": "Barang B-Stock.",
 		"price": 3000,
+		"imageUrl": "https://yt3.ggpht.com/1DD9uGmDxYreoJ5mVJWueEojmKw9C3XaPtDmfdTSGxXvfh9UPOLJUVqlfEk3H2-enqNQ7v3azw=s900-c-k-c0x00ffffff-no-rj",
 		"CategoryId": 2
 	},
 	{
 		"name": "Fandar Jazz Bass",
 		"description": "Bagus.",
 		"price": 8000,
+		"imageUrl": "https://yt3.ggpht.com/1DD9uGmDxYreoJ5mVJWueEojmKw9C3XaPtDmfdTSGxXvfh9UPOLJUVqlfEk3H2-enqNQ7v3azw=s900-c-k-c0x00ffffff-no-rj",
 		"CategoryId": 2
 	},
 	{
 		"name": "Fandar Jazz Bass",
 		"description": "Barang B-Stock.",
 		"price": 5000,
+		"imageUrl": "https://yt3.ggpht.com/1DD9uGmDxYreoJ5mVJWueEojmKw9C3XaPtDmfdTSGxXvfh9UPOLJUVqlfEk3H2-enqNQ7v3azw=s900-c-k-c0x00ffffff-no-rj",
 		"CategoryId": 2
 	},
 	{
 		"name": "Fandar Jazz Bass",
 		"description": "Barang B-Stock.",
 		"price": 5000,
+		"imageUrl": "https://yt3.ggpht.com/1DD9uGmDxYreoJ5mVJWueEojmKw9C3XaPtDmfdTSGxXvfh9UPOLJUVqlfEk3H2-enqNQ7v3azw=s900-c-k-c0x00ffffff-no-rj",
 		"CategoryId": 2
 	},
 	{
 		"name": "Yamahal Drum",
 		"description": "Bagus",
 		"price": 15000,
+		"imageUrl": "https://yt3.ggpht.com/1DD9uGmDxYreoJ5mVJWueEojmKw9C3XaPtDmfdTSGxXvfh9UPOLJUVqlfEk3H2-enqNQ7v3azw=s900-c-k-c0x00ffffff-no-rj",
 		"CategoryId": 3
 	},
 	{
 		"name": "Yamahal Drum",
 		"description": "Barang B-Stock.",
 		"price": 15000,
+		"imageUrl": "https://yt3.ggpht.com/1DD9uGmDxYreoJ5mVJWueEojmKw9C3XaPtDmfdTSGxXvfh9UPOLJUVqlfEk3H2-enqNQ7v3azw=s900-c-k-c0x00ffffff-no-rj",
 		"CategoryId": 3
 	}
 ]
