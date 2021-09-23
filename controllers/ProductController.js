@@ -1,4 +1,4 @@
-const { Product } = require('../models');
+const { Product, Category } = require('../models');
 const { Op } = require('sequelize');
 
 class ProductController {
@@ -18,7 +18,8 @@ class ProductController {
 
 		Product.findAll({ where: condition })
 			.then((products) => {
-				res.render('products-available', { products });
+				let session = req.session;
+				res.render('products-available', { products, session });
 			})
 			.catch((err) => {
 				res.send(err);
@@ -30,6 +31,7 @@ class ProductController {
 
 		Product.findByPk(productId)
 			.then((product) => {
+				let session = req.session;
 				res.render('product-details', { product });
 			})
 			.catch((err) => {
@@ -54,6 +56,38 @@ class ProductController {
 			})
 			.catch((err) => {
 				res.send(err);
+			});
+	}
+
+	static showAddProduct(req, res) {
+		let session = req.session;
+
+		if (session.role !== 'admin') {
+			res.redirect('/');
+		} else {
+			Category.findAll()
+				.then((categories) => {
+					res.render('add-product', { categories, session });
+				})
+				.catch((err) => {
+					res.send(err);
+				});
+		}
+	}
+
+	static addProduct(req, res) {
+		let { name, price, imageUrl, CategoryId, description } = req.body;
+
+		console.log(req.body);
+		Product.create({ name, price, imageUrl, CategoryId, description })
+			.then(() => {
+				res.redirect('/products');
+			})
+			.catch((err) => {
+				let errMsg = err.errors.map((el) => {
+					return el.message;
+				});
+				res.send(errMsg);
 			});
 	}
 }

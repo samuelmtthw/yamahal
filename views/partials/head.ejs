@@ -80,7 +80,7 @@
     font-size: 2.5em;
   }
 
-  .display input{
+  .display input, textarea, select{
     border: none;
     padding: 10px;
     font-size: 1em;
@@ -97,7 +97,6 @@
   }
 
   .display form{
-    
     margin: 20px 0 30px 0;
   }
 
@@ -139,15 +138,27 @@
     text-decoration: none;
   }
 
-  .display .card .details:color{
+  .form{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 800px;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.18);
+    display: flex;
+    flex-direction: column;
+    padding: 100px 100px 80px 100px;
+    border-radius: 20px;
+  }
 
+  .form input, textarea, select{
+    margin: 0 0 20px 0;
   }
 
 
   footer{
     display: block;
     position: relative;
-    
+    width: 100%;
     bottom: 0;
     font-size: 1em;
     text-align: center;

@@ -3,7 +3,8 @@ const bcrypt = require('bcryptjs');
 
 class UserController {
 	static showRegister(req, res) {
-		res.render('register');
+		let session = req.session;
+		res.render('register', { session });
 	}
 
 	static registerUser(req, res) {
@@ -21,9 +22,11 @@ class UserController {
 		})
 			.then((result) => {
 				InfoUser.create({ name, address, phone, UserId: result.id })
-					.then((result) => {
+					.then(() => {
 						req.session.isLogin = true;
 						req.session.UserId = result.id;
+						console.log(result.role);
+						// req.session.role = result.role;
 						req.session.name = name;
 						res.redirect('/');
 					})
@@ -44,9 +47,10 @@ class UserController {
 
 	static showInfo(req, res) {
 		let userId = Number(req.session.UserId);
+		let session = req.session;
 		InfoUser.findOne({ where: { UserId: userId } })
 			.then((user) => {
-				res.render('user-info', { user });
+				res.render('user-info', { user, session });
 			})
 			.catch((err) => {
 				console.log(err);
@@ -76,9 +80,10 @@ class UserController {
 	}
 
 	static showPurchases(req, res) {
+		let session = req.session;
 		Product.findAll({ where: { UserId: req.session.UserId } })
 			.then((purchases) => {
-				res.render('purchases', { purchases });
+				res.render('purchases', { purchases, session });
 			})
 			.catch((err) => {
 				res.send(err);

@@ -21,14 +21,8 @@
     }
   </style>
   <body>
-    <!-- form action='/register' method='post' -->
-    <!-- username
-    email
-    password
-    name
-    address
-    phone -->
-    <section class="d-flex align-items-center min-vh-100">
+    <%- include('./partials/header.ejs') %>
+    <section class="d-flex align-items-center min-vh-100" style="margin-bottom: 100px; min-height: 80vh;">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-5">
@@ -58,11 +52,12 @@
                 <label for="phone">No. Handphone</label>
                 <input class="form-control" type="number" name="phone" id="phone" placeholder="No. Handphone" />
               </div>
-              <input class="btn btn-primary" type="submit" value="Register" />
+              <input class="btn btn-dark" type="submit" value="Register" />
             </form>
           </div>
         </div>
       </div>
     </section>
+    <%- include('./partials/footer.ejs') %>
   </body>
 </html>

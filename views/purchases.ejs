@@ -15,8 +15,10 @@
     <div class="items">
       <% purchases.forEach(el=>{ %> 
         <div class="card">
-          <%= el.name %>
-          Rp. <%= el.price %> 
+          <span class="name"><%= el.name %></span>
+          <span class="price">
+            € <%= el.price %> 
+          </span>
           <img src="<%= el.imageUrl %> " alt="<%= el.name %>">
           <strong>Purchased on: </strong> <%= el.updatedAtFormatted %> 
         </div>

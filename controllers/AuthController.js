@@ -3,7 +3,8 @@ const bcrypt = require('bcryptjs');
 
 class AuthController {
 	static formLogin(req, res) {
-		res.render('login');
+		let session = req.session;
+		res.render('login', { session });
 	}
 
 	static postLogin(req, res) {

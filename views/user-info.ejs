@@ -7,21 +7,6 @@
     <title>User Info</title>
   </head>
   <body>
-    <!-- <h1>User Info</h1>
-  <form action="/user/info" method="post">
-  <label for="name">Full Name</label><br>
-  <input type="text" name="name" id="name" value="<%= user.name %>"><br>
-  <br>
-  <label for="address">Address</label><br>
-  <textarea name="address" id="" cols="30" rows="10"><%= user.address %></textarea><br>
-  <br>
-  <label for="phone">Phone Number</label><br>
-  <input type="number" name="phone" id="phone" value="<%= user.phone %>"><br>
-  <br>
-   
-  <input type="submit" value="Submit">
-  <a href="/">Cancel</a>
- </form> -->
     <!DOCTYPE html>
     <html lang="en">
       <head>
@@ -45,14 +30,8 @@
         }
       </style>
       <body>
-        <!-- form action='/register' method='post' -->
-        <!-- username
-    email
-    password
-    name
-    address
-    phone -->
-        <section">
+        <%- include('./partials/header.ejs') %>
+        <section style="margin-bottom: 50px;">
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-md-5">
@@ -77,6 +56,7 @@
             </div>
           </div>
         </section>
+        <%- include('./partials/footer.ejs') %>
       </body>
     </html>
   </body>
