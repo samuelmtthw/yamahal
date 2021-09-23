@@ -6,7 +6,9 @@ class ProductController {
 			.then((products) => {
 				res.render('products-available', { products });
 			})
-			.catch((err) => {});
+			.catch((err) => {
+				res.send(err);
+			});
 	}
 }
 
