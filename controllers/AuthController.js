@@ -24,6 +24,7 @@ class AuthController {
 						req.session.role = user.role;
 						req.session.isLogin = true;
 						req.session.name = user.username;
+						req.session.UserId = user.id;
 						res.redirect('/');
 					} else {
 						res.send('Username / Password is incorrect');

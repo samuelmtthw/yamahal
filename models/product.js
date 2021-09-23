@@ -12,6 +12,14 @@ module.exports = (sequelize, DataTypes) => {
 			Product.belongsTo(models.User, { foreignKey: 'UserId' });
 			Product.belongsTo(models.Category, { foreignKey: 'CategoryId' });
 		}
+
+		get updatedAtFormatted() {
+			return new Date(this.updatedAt).toISOString().split('T')[0];
+		}
+
+		get createdAtFormatted() {
+			return new Date(this.createdAt).toISOString().split('T')[0];
+		}
 	}
 	Product.init(
 		{
