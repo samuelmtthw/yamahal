@@ -10,6 +10,18 @@ class ProductController {
 				res.send(err);
 			});
 	}
+
+	static showProductDetails(req, res) {
+		let productId = Number(req.params.productId);
+
+		Product.findByPk(productId)
+			.then((product) => {
+				res.render('product-details', { product });
+			})
+			.catch((err) => {
+				res.send(err);
+			});
+	}
 }
 
 module.exports = ProductController;
