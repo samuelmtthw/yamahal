@@ -14,10 +14,38 @@ module.exports = (sequelize, DataTypes) => {
 	}
 	InfoUser.init(
 		{
-			name: DataTypes.STRING,
-			address: DataTypes.STRING,
-			phone: DataTypes.INTEGER,
-			UserId: DataTypes.INTEGER,
+			name: {
+				type: DataTypes.STRING,
+				validate: {
+					notEmpty: {
+						msg: "Name can't be empty",
+					},
+				},
+			},
+			address: {
+				type: DataTypes.STRING,
+				validate: {
+					notEmpty: {
+						msg: "Address can't be empty",
+					},
+				},
+			},
+			phone: {
+				type: DataTypes.INTEGER,
+				validate: {
+					notEmpty: {
+						msg: "Phone number can't be empty",
+					},
+				},
+			},
+			UserId: {
+				type: DataTypes.INTEGER,
+				validate: {
+					notEmpty: {
+						msg: "UserId can't be empty",
+					},
+				},
+			},
 		},
 		{
 			sequelize,
