@@ -90,6 +90,8 @@ class ProductController {
 				res.send(errMsg);
 			});
 	}
+
+	static showAdminProducts(req, res) {}
 }
 
 module.exports = ProductController;

@@ -41,15 +41,15 @@
                   <h1 class="text-center text-dark">Profile</h1>
                   <div class="mb-3">
                     <label for="name" class="text-dark">Full Name</label>
-                    <input class="form-control" type="text" name="name" id="name" placeholder="Fullname" />
+                    <input class="form-control" type="text" name="name" id="name" placeholder="Fullname" value="<%= user.name %>"/>
                   </div>
                   <div class="mb-3">
                     <label for="address" class="text-dark">Address</label>
-                    <input class="form-control" type="text" name="address" id="address" placeholder="Address" />
+                    <input class="form-control" type="text" name="address" id="address" placeholder="Address" value="<%= user.address %>"/>
                   </div>
                   <div class="mb-3">
                     <label for="phone" class="text-dark">No. Handphone</label>
-                    <input class="form-control" type="number" name="phone" id="phone" placeholder="No. Handphone" />
+                    <input class="form-control" type="number" name="phone" id="phone" placeholder="No. Handphone" value="<%= user.phone %>"/>
                   </div>
                   <input class="btn text-light" style="background-color: #48217a" type="submit" value="Submit" />
                   <a class="btn text-light" style="background-color: #48217a" href="/" role="button">Cancel</a>
