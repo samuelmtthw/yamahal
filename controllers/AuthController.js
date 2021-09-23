@@ -6,23 +6,26 @@ class AuthController {
 	}
 
 	static postLogin(req, res) {
-		req.session.username = req.body.username;
-		req.session.isLogin = true;
-		req.session.role = 'user';
+		let { username, password } = req.body;
 
-		res.redirect('/');
+		User.findOne({ where: { username: username } })
+			.then((user) => {
+				// TODO compare password pake bcrypt
+
+				console.log(user);
+				req.session.role = user.role;
+				res.redirect('/');
+			})
+			.catch((err) => {
+				res.send(err);
+			});
+
+		// req.session.isLogin = true;
+		// req.session.role = 'user';
+
+		// res.redirect('/');
 
 		// ambil password, bandingin sama yang ada di database
-
-		// User.findOne({ where: { username: req.body.username } })
-		// 	.then((user) => {
-		// 		console.log(user);
-		// 		req.session.role = user.role;
-		// 		res.redirect('/');
-		// 	})
-		// 	.catch((err) => {
-		// 		res.send(err);
-		// 	});
 	}
 
 	static postLogout(req, res) {

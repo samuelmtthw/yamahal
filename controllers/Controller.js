@@ -1,6 +1,8 @@
 class Controller {
 	static showHomepage(req, res) {
-		res.render('homepage');
+		let data = req.session.isLogin;
+		console.log(data);
+		res.render('homepage', { data });
 	}
 }
 

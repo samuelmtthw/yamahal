@@ -1,6 +1,7 @@
 const express = require('express');
 const AuthController = require('../controllers/AuthController');
 const Controller = require('../controllers/Controller');
+const UserController = require('../controllers/UserController');
 const isLoginMiddleware = require('../middlewares/isLogin');
 const router = express.Router();
 
@@ -12,11 +13,12 @@ const router = express.Router();
  */
 router.get('/login', AuthController.formLogin);
 router.post('/login', AuthController.postLogin);
+router.post('/register', UserController.showRegister);
 
 /**
  * Content
  */
-// router.use(isLoginMiddleware);
+router.use(isLoginMiddleware);
 router.get('/', Controller.showHomepage);
 
 // router.use('/path1', path1);
