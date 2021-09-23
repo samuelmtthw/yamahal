@@ -13,8 +13,6 @@ class UserController {
 		let salt = bcrypt.genSaltSync(10);
 		let hash = bcrypt.hashSync(password, salt);
 
-		//TODO hash password pake bcrypt
-
 		User.create({
 			username,
 			email,

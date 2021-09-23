@@ -1,5 +1,6 @@
 const { Product, Category } = require('../models');
 const { Op } = require('sequelize');
+const formatPrice = require('../helpers/formatPrice');
 
 class ProductController {
 	static showAllProducts(req, res) {
@@ -19,7 +20,11 @@ class ProductController {
 		Product.findAll({ where: condition })
 			.then((products) => {
 				let session = req.session;
-				res.render('products-available', { products, session });
+				res.render('products-available', {
+					products,
+					session,
+					formatPrice,
+				});
 			})
 			.catch((err) => {
 				res.send(err);

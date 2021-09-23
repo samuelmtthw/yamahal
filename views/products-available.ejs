@@ -19,7 +19,7 @@
       <% products.forEach(el=>{ %> 
       <div class="card" data-aos="fade-up">
         <span class="name"><%= el.name %></span>
-        <span class="price">€ <%= el.price %></span> 
+        <span class="price"><%= formatPrice(el.price) %></span> 
         <img src="<%= el.imageUrl %> " alt="<%= el.name %>">
         <a href="/products/<%= el.id %>" class="details">Details</a>
       </div>
