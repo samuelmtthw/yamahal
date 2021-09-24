@@ -34,7 +34,7 @@ class ProductController {
 	static showProductDetails(req, res) {
 		let productId = Number(req.params.productId);
 
-		Product.findByPk(productId)
+		Product.findByPk(productId, { include: Category })
 			.then((product) => {
 				let session = req.session;
 				res.render('product-details', { product, session });

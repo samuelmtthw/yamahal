@@ -18,7 +18,7 @@
         <span class="price">€ <%= el.price %></span> 
         <img src="<%= el.imageUrl %> " alt="<%= el.name %>">
         <% if(el.UserId){ %> 
-          <a  class="details" style="background-color: red;" disabled>Sold</a>
+          <a  class="details" style="background-color: red;" disabled>Sold to  </a>
           <% } else { %> 
             <a class="details" style="background-color: green;" disabled>Available</a>
         <% } %> 
